@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException, status
-from ..models.order import OrderCreateRequest, OrderResponse, OrderDetailResponse
+from ..models.order_model import OrderCreateRequest, OrderResponse, OrderDetailResponse
 from ..services.order_service import OrderService
 import logging
 

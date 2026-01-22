@@ -1,7 +1,7 @@
 import logging
 import sys
 from .config import Config
-from .consumers.inventory_consumer import InventoryEventConsumer
+from .events.notification_consumer import NotificationEventConsumer
 
 # Configure logging
 logging.basicConfig(
@@ -13,12 +13,12 @@ logger = logging.getLogger(__name__)
 
 def main():
     """Main entry point"""
-    logger.info("Starting Inventory Service...")
+    logger.info("Starting Notification Service...")
     
     try:
         # Start consuming events
-        logger.info("Starting to consume OrderCreated events...")
-        InventoryEventConsumer.start_consuming()
+        logger.info("Starting to consume OrderProcessed events...")
+        NotificationEventConsumer.start_consuming()
         
     except KeyboardInterrupt:
         logger.info("Received shutdown signal")
@@ -26,8 +26,8 @@ def main():
         logger.error(f"Fatal error: {e}")
         sys.exit(1)
     finally:
-        InventoryEventConsumer.close()
-        logger.info("Inventory Service stopped")
+        NotificationEventConsumer.close()
+        logger.info("Notification Service stopped")
 
 if __name__ == "__main__":
     main()

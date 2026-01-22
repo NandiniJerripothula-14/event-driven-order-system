@@ -4,7 +4,7 @@ import logging
 import sys
 from .config import Config
 from .db import Database
-from .services.event_publisher import EventPublisher
+from .events.event_publisher import EventPublisher
 from .routes import orders
 
 # Configure logging
