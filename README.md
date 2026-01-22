@@ -2,6 +2,14 @@
 
 A production-ready, scalable microservices-based order processing system built with Event-Driven Architecture (EDA). This project demonstrates core distributed systems concepts including asynchronous event publishing/consumption, eventual consistency, and service resilience.
 
+## ✨ Project Highlights
+
+- **Event-Driven Microservices Architecture** - RabbitMQ-powered asynchronous communication between decoupled services
+- **Asynchronous Order Processing** - Non-blocking request-response with event-driven status updates
+- **Idempotent Consumers + Retry + DLQ** - Robust error handling with exponential backoff and dead-letter queues
+- **Fully Dockerized with Health Checks** - All services containerized with automatic startup verification
+- **Unit + Integration Tests Included** - 17+ comprehensive tests covering all critical paths
+
 ## 🎯 Quick Start
 
 ### Prerequisites
